@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Logging in and out of the application in one instance, without launching a seprate instance for log out.</description>
+   <name>Sign In and Sign Out (one instance)</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>042239b4-1a70-40d7-9597-819ea6ed1ee9</testCaseGuid>
+</TestCaseEntity>

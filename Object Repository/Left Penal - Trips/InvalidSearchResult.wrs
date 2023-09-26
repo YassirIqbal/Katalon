@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WindowsElementEntity>
+   <description></description>
+   <name>InvalidSearchResult</name>
+   <tag></tag>
+   <locator>Raw Small</locator>
+   <locatorStrategy>NAME</locatorStrategy>
+   <properties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>Name</name>
+      <type>Main</type>
+      <value>Raw Small</value>
+      <webElementGuid>8dc545ed-c1b0-487c-8128-0714e8bd8df1</webElementGuid>
+   </properties>
+</WindowsElementEntity>

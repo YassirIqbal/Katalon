@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WindowsElementEntity>
+   <description></description>
+   <name>ValidSearchResult2</name>
+   <tag></tag>
+   <locator>Validifier 1</locator>
+   <locatorStrategy>NAME</locatorStrategy>
+   <properties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>Name</name>
+      <type>Main</type>
+      <value>Validifier 1</value>
+      <webElementGuid>bc3abbdc-e35d-47e4-b356-f520bfbed491</webElementGuid>
+   </properties>
+</WindowsElementEntity>

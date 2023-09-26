@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Signing out of AT app 
+pre condition : logged in.</description>
+   <name>Sign Out</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>7e4ba872-a2fa-4977-a242-8ae39940d367</testCaseGuid>
+</TestCaseEntity>

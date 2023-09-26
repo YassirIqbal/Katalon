@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>User Log In for AT app</description>
+   <name>Sign In</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>ce29d5b9-76d7-4f10-9c73-71c456e72ffd</testCaseGuid>
+</TestCaseEntity>
