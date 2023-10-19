@@ -23,27 +23,25 @@ import java.nio.file.StandardCopyOption as StandardCopyOption
 import java.util.stream.Collectors as Collectors
 
 //Windows.startApplicationWithTitle('C:\\Program Files\\Quixel Tracker staging3\\Quixel Tracker staging3.exe', 'Quixel Tracker staging3')
-
-
+'Added delay'
 Thread.sleep(15000)
 
-
+'Click QA stage'
 Windows.click(findWindowsObject('Object Repository/Pipeline/Processing/QA'))
 
+'Click the asset on QA stage'
 Windows.click(findWindowsObject('Object Repository/Pipeline/QA/AssetOnQA'))
 
+'Click next button'
 Windows.click(findWindowsObject('Object Repository/Pipeline/QA/NextButton'))
 
+'Click upload button'
 Windows.click(findWindowsObject('Object Repository/Pipeline/QA/UploadButton'))
 
 ////////////////////Verification part ////////////////////////////////////////////////////
-
-
-
-
-
-
+'Click CC Reg'
 Windows.click(findWindowsObject('Object Repository/Pipeline/QA/CC Reg'))
 
+'Click asset on CC Reg'
 Windows.click(findWindowsObject('Object Repository/Pipeline/QA/AssetOnCCReg'))
 

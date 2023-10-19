@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>Set legal review in Trips</description>
    <name>TC_Trips_ SetLegalReview</name>
    <tag></tag>
    <comment></comment>

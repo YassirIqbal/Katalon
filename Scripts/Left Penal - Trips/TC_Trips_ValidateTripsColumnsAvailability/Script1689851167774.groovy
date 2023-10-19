@@ -18,7 +18,6 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
 //Windows.startApplicationWithTitle('C:\\Program Files\\Quixel Tracker staging3\\Quixel Tracker staging3.exe', 'Quixel Tracker staging3')
-
 //Windows.setText(findWindowsObject('Object Repository/Sign In/Edit'), 'muhammad.mubeen+1@epicgames.quixel.com')
 //
 //Windows.setText(findWindowsObject('Object Repository/Sign In/Edit(1)'), 'Mubeen@123')
@@ -28,41 +27,56 @@ import org.openqa.selenium.Keys as Keys
 //def verifySignIn = Windows.getText(findWindowsObject('Object Repository/Sign In/Text(1)'))
 //
 //assert verifySignIn == 'TRIPS'
-
+'Added delay '
 Thread.sleep(15000)
 
 //Windows.verifyElementPresent(findWindowsObject('Object Repository/Left Penal - Trips/ScannedAt'), 10, FailureHandling.OPTIONAL)
 //Windows.verifyElementPresent(findWindowsObject('Object Repository/Left Penal - Trips/ScannedAt'), 10, FailureHandling.CONTINUE_ON_FAILURE)
-
+'Verify the coloumn "images"'
 Windows.verifyElementPresent(findWindowsObject('Object Repository/Left Penal - Trips/Images'), 10, FailureHandling.CONTINUE_ON_FAILURE)
 
+'Verify the coloumn "Title"'
 Windows.verifyElementPresent(findWindowsObject('Object Repository/Left Penal - Trips/Title'), 10, FailureHandling.CONTINUE_ON_FAILURE)
 
+'Verify the coloumn "legal Review"'
 Windows.verifyElementPresent(findWindowsObject('Object Repository/Left Penal - Trips/LegalReview'), 10, FailureHandling.CONTINUE_ON_FAILURE)
 
+'Verify the coloumn "Status"'
 Windows.verifyElementPresent(findWindowsObject('Object Repository/Left Penal - Trips/Status'), 10, FailureHandling.CONTINUE_ON_FAILURE)
 
+'Verify the coloumn "Assignee"'
 Windows.verifyElementPresent(findWindowsObject('Object Repository/Left Penal - Trips/Assignee'), 10, FailureHandling.CONTINUE_ON_FAILURE)
 
+'Verify the coloumn "Priority1"'
 Windows.verifyElementPresent(findWindowsObject('Object Repository/Left Penal - Trips/Priority1'), 10, FailureHandling.CONTINUE_ON_FAILURE)
 
+'Verify the coloumn "Stage"'
 Windows.verifyElementPresent(findWindowsObject('Object Repository/Left Penal - Trips/Stage'), 10, FailureHandling.CONTINUE_ON_FAILURE)
 
+'Verify the coloumn "Studio"'
 Windows.verifyElementPresent(findWindowsObject('Object Repository/Left Penal - Trips/Studio'), 10, FailureHandling.CONTINUE_ON_FAILURE)
 
+'Verify the coloumn "Created by"'
 Windows.verifyElementPresent(findWindowsObject('Object Repository/Left Penal - Trips/CreatedBy'), 10, FailureHandling.CONTINUE_ON_FAILURE)
 
+'Verify the coloumn "Type"\r\n\t'
 Windows.verifyElementPresent(findWindowsObject('Object Repository/Left Penal - Trips/Type'), 10, FailureHandling.CONTINUE_ON_FAILURE)
 
+'Verify the coloumn "CameraIndex"'
 Windows.verifyElementPresent(findWindowsObject('Object Repository/Left Penal - Trips/CameraIndex'), 10, FailureHandling.CONTINUE_ON_FAILURE)
 
+'Verify the coloumn "Proxy mesh"'
 Windows.verifyElementPresent(findWindowsObject('Object Repository/Left Penal - Trips/ProxyMesh'), 10, FailureHandling.CONTINUE_ON_FAILURE)
 
+'Verify the coloumn "Trip"'
 Windows.verifyElementPresent(findWindowsObject('Object Repository/Left Penal - Trips/Trip'), 10, FailureHandling.CONTINUE_ON_FAILURE)
 
+'Verify the coloumn "Location"'
 Windows.verifyElementPresent(findWindowsObject('Object Repository/Left Penal - Trips/Location'), 10, FailureHandling.CONTINUE_ON_FAILURE)
 
+'Verify the coloumn "ID"'
 Windows.verifyElementPresent(findWindowsObject('Object Repository/Left Penal - Trips/ID'), 10, FailureHandling.CONTINUE_ON_FAILURE)
 
+'Verify the coloumn "Coordinates"'
 Windows.verifyElementPresent(findWindowsObject('Object Repository/Left Penal - Trips/Coordinates'), 10, FailureHandling.CONTINUE_ON_FAILURE)
 

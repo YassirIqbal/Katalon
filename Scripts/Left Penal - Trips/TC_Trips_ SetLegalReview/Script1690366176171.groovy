@@ -17,7 +17,6 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-
 //Windows.startApplicationWithTitle('C:\\Program Files\\Quixel Tracker staging3\\Quixel Tracker staging3.exe', 'Quixel Tracker staging3')
 //
 //
@@ -31,7 +30,9 @@ import org.openqa.selenium.Keys as Keys
 //
 //assert verifySignIn == 'TRIPS'
 //
+'Added delay \r\n'
 Thread.sleep(10000)
+
 //
 //
 //Windows.click(findWindowsObject('Object Repository/Left Penal - Trips/SearchIcon'))
@@ -41,20 +42,21 @@ Thread.sleep(10000)
 //Windows.setText(findWindowsObject('Object Repository/Left Penal - Trips/SearchField'), 'Desktop')
 //
 //Windows.sendKeys(findWindowsObject('Object Repository/Left Penal - Trips/SearchField'), Keys.chord(Keys.ENTER))
-
+'Click the legal review dropdown to expand'
 Windows.click(findWindowsObject('Object Repository/Left Penal - Trips/Legal Review/LegalReviewDropdown'))
 
+'Click legal option (needed)'
 Windows.click(findWindowsObject('Object Repository/Left Penal - Trips/Legal Review/LegalOption'))
 
+'Switched to pop up '
 Windows.switchToWindowTitle('Confirm')
 
+'Click save button on the pop up '
 Windows.click(findWindowsObject('Object Repository/Left Penal - Trips/Legal Review/Save'))
 
+'Switched back to main application window'
 Windows.switchToWindowTitle('Quixel Tracker')
 
+'Get the text for the legal review status (to verify status)'
 def verifyStatus = Windows.getText(findWindowsObject('Object Repository/Left Penal - Trips/Legal Review/LegalReviewStatus'))
-
-//assert verifyStatus == 'Needs Review', "Selected value doesn't match the expected value"
-
-
 

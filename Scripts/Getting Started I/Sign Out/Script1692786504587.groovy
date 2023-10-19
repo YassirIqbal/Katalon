@@ -17,23 +17,30 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+'Launch application'
 Windows.startApplicationWithTitle('C:\\Program Files\\Quixel Tracker staging3\\Quixel Tracker staging3.exe', 'Asset Tracker')
 
+'Added delay'
 Windows.delay(1)
 
+'Click account button'
 Windows.click(findWindowsObject('Object Repository/Getting Started/ButtonAccount'))
 
+'Click sign out button'
 Windows.click(findWindowsObject('Object Repository/Getting Started/ButtonSignOut'))
 
+'Added delay'
 Windows.delay(3)
 
+'Get text attribute'
 def assetAttribute = Windows.getAttribute(findWindowsObject('Object Repository/Getting Started/TextLogIn'), 'Name')
-assert assetAttribute == 'LOG IN': 'User properly logged out'
 
+'Validate Log in'
+assert assetAttribute == 'LOG IN' : 'User properly logged out'
+
+'Added delay'
 Windows.delay(2)
 
+'Close application'
 Windows.closeApplication()
-
-
-
 

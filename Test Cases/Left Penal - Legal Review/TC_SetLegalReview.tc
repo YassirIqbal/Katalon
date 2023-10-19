@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>Set legal review</description>
    <name>TC_SetLegalReview</name>
    <tag></tag>
    <comment></comment>

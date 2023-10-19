@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>Verify Export funcitonality in Trips</description>
    <name>TC_VerifyExportTripsFunctionality</name>
    <tag></tag>
    <comment></comment>

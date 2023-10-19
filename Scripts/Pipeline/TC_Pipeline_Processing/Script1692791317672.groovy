@@ -24,47 +24,48 @@ import java.nio.file.StandardCopyOption as StandardCopyOption
 import java.util.stream.Collectors as Collectors
 
 //Windows.startApplicationWithTitle('C:\\Program Files\\Quixel Tracker staging3\\Quixel Tracker staging3.exe', 'Quixel Tracker staging3')
-
 //Windows.click(findWindowsObject('Object Repository/Pipeline/QA/AssetOnProcessing'))
 ////////////////////////////////////Files copy to QA Folder///////////////////////////
-
+'Added delay'
 Thread.sleep(15000)
 
-
-
+'Click on processing'
 Windows.click(findWindowsObject('Object Repository/Pipeline/Reality Capture/Processing'))
 
-
-
+'Get the text of Asset on processing'
 def verifyScreen = Windows.getText(findWindowsObject('Object Repository/Pipeline/Reality Capture/AssetonProcessing'))
 
+'Verify name of the asset'
 assert verifyScreen == 'Desktop 1'
 
+'Click on the asset'
 Windows.click(findWindowsObject('Object Repository/Pipeline/Reality Capture/AssetonProcessing'))
 
-
+'Click on upload pop up '
 Windows.click(findWindowsObject('Object Repository/Pipeline/Reality Capture/UploadPopupRC'))
 
+'Click on clear button\r\n'
 Windows.click(findWindowsObject('Object Repository/Pipeline/Reality Capture/ClearAll'))
 
 ///////////////////
+'Setting source folder path\r\n'
 Path sourceFolder = Paths.get('C://Users//Quixel//Desktop//For QA Folder')
 
-Path destinationFolder = Paths.get("C:\\Users\\Quixel\\Desktop\\Destination\\$GlobalVariable.AssetID\\qa-$GlobalVariable.AssetID")
+'Setting destination folder path\r\n'
+Path destinationFolder = Paths.get("C:\Users\Quixel\Desktop\Destination\$GlobalVariable.AssetID\qa-$GlobalVariable.AssetID")
 
 // Find all files in the source folder
-List<Path> files = Files.list(sourceFolder)
-	.filter(new java.util.function.Predicate<Path>() {
-		@Override
-		boolean test(Path p) {
-			Files.isRegularFile(p)
-		}
-	})
-	.collect(Collectors.toList())
-	println(files)
+'Copying the filed'
+List<Path> files = Files.list(sourceFolder).filter(new script1697530790380$1()).collect(Collectors.toList())
+
+'Printing the file names'
+println(files)
+
+'Printing file names \r\n'
 println(files)
 
 // Copy each file from source to destination
+'Moving the files '
 for (Path file : files) {
     Path destinationFile = destinationFolder.resolve(file.getFileName())
 
@@ -73,31 +74,43 @@ for (Path file : files) {
     // Log success message for each file
     println((('File copied successfully from ' + file.toString()) + ' to ') + destinationFile.toString())
 }
+
 //
 //Windows.click(findWindowsObject('Object Repository/Pipeline/Processing/Processing'))
 //
+'Click on Asset'
 Windows.click(findWindowsObject('Object Repository/Pipeline/Processing/AssetOnProcessing'))
 
+'Click on next button'
 Windows.click(findWindowsObject('Object Repository/Pipeline/Processing/NextButton'))
 
+'Click on over write button'
 Windows.click(findWindowsObject('Object Repository/Pipeline/Processing/OverWriteButton'))
 
+'Click on upload main'
 Windows.click(findWindowsObject('Object Repository/Pipeline/Processing/uploadMain'))
 
+'Click on asset in upload dropdown'
 Windows.click(findWindowsObject('Object Repository/Pipeline/Processing/AssetNameUploaddropdown'))
 
+'added delay '
 def timeout = 1000 // Timeout in seconds
 
+'Setting the pol time'
 def pollingInterval = 1 // Interval between each check in seconds
 
+'Setting the desired text to Done'
 def desiredText = 'DONE'
 
 // Define the start time and end time for timeout calculation
+'System start time'
 def startTime = System.currentTimeMillis()
 
+'System end time'
 def endTime = startTime + (timeout * 1000)
 
 // Loop until the timeout is reached
+'Loop for checking the status'
 while (System.currentTimeMillis() < endTime) {
     try {
         // Find the Windows Object representing the element
@@ -127,9 +140,8 @@ while (System.currentTimeMillis() < endTime) {
 }
 
 // Check if the desired text is found
+'Verify if status have been found'
 if (System.currentTimeMillis() >= endTime) {
     println("Final Desired text found: $desiredText")
 }
-
-
 

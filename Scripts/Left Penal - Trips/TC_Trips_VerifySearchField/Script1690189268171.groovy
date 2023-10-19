@@ -28,30 +28,35 @@ import org.openqa.selenium.Keys as Keys
 //def verifySignIn = Windows.getText(findWindowsObject('Object Repository/Sign In/Text(1)'))
 //
 //assert verifySignIn == 'TRIPS'
-
+'Added delay '
 Thread.sleep(15000)
 
+'Click the search icon'
 Windows.click(findWindowsObject('Object Repository/Left Penal - Trips/SearchIcon'))
 
+'Click the search field'
 Windows.click(findWindowsObject('Object Repository/Left Penal - Trips/SearchField'))
 
+'Set the text int he search field'
 Windows.setText(findWindowsObject('Object Repository/Left Penal - Trips/SearchField'), 'axsdeasdwe')
 
+'Press enter to search '
 Windows.sendKeys(findWindowsObject('Object Repository/Left Penal - Trips/SearchField'), Keys.chord(Keys.ENTER))
 
 //Windows.verifyElementPresent(findWindowsObject('Object Repository/Left Penal - Trips/ValidSearchResult1'), 10, FailureHandling.CONTINUE_ON_FAILURE)
-
 //Windows.verifyElementPresent(findWindowsObject('Object Repository/Left Penal - Trips/ValidSearchResult2'), 10, FailureHandling.CONTINUE_ON_FAILURE)
 //
 //Windows.verifyElementPresent(findWindowsObject('Object Repository/Left Penal - Trips/InvalidSearchResult'), 10, FailureHandling.CONTINUE_ON_FAILURE)
-
+'Press backspace to remove the text from search field'
 Windows.sendKeys(findWindowsObject('Object Repository/Left Penal - Trips/SearchField'), Keys.chord(Keys.BACK_SPACE))
 
+'Set text of desktop in search field'
 Windows.setText(findWindowsObject('Object Repository/Left Penal - Trips/SearchField'), 'Desktop')
 
+'Press enter to search\r\n'
 Windows.sendKeys(findWindowsObject('Object Repository/Left Penal - Trips/SearchField'), Keys.chord(Keys.ENTER))
 
 //Windows.verifyElementPresent(findWindowsObject('Object Repository/Left Penal - Trips/NoSearchResults'), 10, FailureHandling.CONTINUE_ON_FAILURE)
-
-
+'Press backspace to remove the text from search field'
 Windows.sendKeys(findWindowsObject('Object Repository/Left Penal - Trips/SearchField'), Keys.chord(Keys.BACK_SPACE))
+

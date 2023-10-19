@@ -27,53 +27,59 @@ import com.kms.katalon.core.testobject.TestObjectProperty as TestObjectProperty
 import org.json.JSONObject as JSONObject
 import groovy.json.JsonBuilder as JsonBuilder
 
-
 //Windows.startApplicationWithTitle('C:\\Program Files\\Quixel Tracker staging3\\Quixel Tracker staging3.exe', 'Quixel Tracker staging3')
-
+'Added delay'
 Thread.sleep(20000)
 
+'Click QA '
 Windows.click(findWindowsObject('Object Repository/Pipeline/Processing/QA'))
 
+'Click Asset on QA'
 Windows.click(findWindowsObject('Object Repository/Pipeline/QA/AssetOnQA'))
 
-
+'Click asset JSON'
 Windows.click(findWindowsObject('Object Repository/Pipeline/Json/AssetJson'))
 
 Windows.click(findWindowsObject('Object Repository/Pipeline/Json/Button'))
 
+'Added delay'
 Thread.sleep(120000)
 
+'Click upload status'
 Windows.click(findWindowsObject('Object Repository/Pipeline/Json/UploadStatus'))
 
+'click cancel all '
 Windows.click(findWindowsObject('Object Repository/Pipeline/Json/CancelAll'))
 
+'Click clear all'
 Windows.click(findWindowsObject('Object Repository/Pipeline/Json/ClearAll'))
 
-
-
 // Define the path to JSON files
+'JSON file path'
 def surfaceJsonFilePath = 'C:\\Users\\Quixel\\Downloads\\sufaces_schema_v2_after_qa_stage.json'
 
 //def jsonSchemaFilePath = ((('C:\\Users\\Quixel\\Documents\\Asset Tracker Downloads\\' + 'xdilahmqx') + '\\qa-') + 'xdilahmqx') + 
 //'\\xdilahmqx.json'
-
 //def jsonSchemaFilePath = "C:\\Users\\Quixel\\Documents\\Asset Tracker Downloads\\" + GlobalVariable.AssetID + "\\qa-" + GlobalVariable.AssetID + "\\" + GlobalVariable.AssetID + ".json"
-
-def jsonSchemaFilePath = "C:\\Users\\Quixel\\Desktop\\Destination\\" + GlobalVariable.AssetID + "\\qa-" + GlobalVariable.AssetID + "\\" + GlobalVariable.AssetID + ".json"
-
+'JSON schema file path'
+def jsonSchemaFilePath = ((((('C:\\Users\\Quixel\\Desktop\\Destination\\' + GlobalVariable.AssetID) + '\\qa-') + GlobalVariable.AssetID) + 
+'\\') + GlobalVariable.AssetID) + '.json'
 
 // Read the contents of the JSON files
+'Parse JSON '
 def surfaceJsonContents = new File(surfaceJsonFilePath).text
 
+'Parse JSON schema'
 def jsonSchemaContents = new File(jsonSchemaFilePath).text
 
+'Compare JSON with JSON schema to verify '
 boolean successful = WS.validateJsonAgainstSchema(jsonSchemaContents, surfaceJsonContents)
 
+'Check if JSON verification is success'
 if (successful) {
     println('JSON schema validation passed')
 } else {
+    'JSON verification failed'
     println('JSON schema validation failed')
 }
-
-
 

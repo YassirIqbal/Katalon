@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>Test QA stage in Pipeline</description>
    <name>TC_Pipeline_QA</name>
    <tag></tag>
    <comment></comment>

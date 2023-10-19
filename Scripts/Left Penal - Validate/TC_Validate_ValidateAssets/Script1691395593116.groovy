@@ -28,75 +28,77 @@ import org.openqa.selenium.Keys as Keys
 //def verifySignIn = Windows.getText(findWindowsObject('Object Repository/Sign In/Text(1)'))
 //
 //assert verifySignIn == 'TRIPS'
-
+'Added delay '
 Thread.sleep(10000)
 
+'Select Validate stage '
 Windows.click(findWindowsObject('Object Repository/Left Penal - Validate/LeftPenalValidateButton'))
 
+'Open trip dropdown'
 Windows.click(findWindowsObject('Object Repository/Left Penal - Validate/TripDropdown'))
 
+'Search the required trip'
 Windows.setText(findWindowsObject('Object Repository/Left Penal - Validate/SearchTrip'), 'Mubeen')
 
+'Trip selected '
 Windows.click(findWindowsObject('Object Repository/Left Penal - Validate/SelectTrip1'))
 
-
 //Need to work, if its checked then leave it and if its unchecked then check it 
-
-
+'Select checkbox'
 Windows.click(findWindowsObject('Object Repository/Left Penal - Validate/CheckBox'))
 
+'Click validation button to go to Validation part 2 '
 Windows.click(findWindowsObject('Object Repository/Left Penal - Validate/StartValidationButton'))
 
 //def verifyScreen = Windows.getText(findWindowsObject('Object Repository/Left Penal - Validate/ScreenValidator'))
 //
 //assert verifyScreen == 'MERGE'
-
+'Added delay'
 Thread.sleep(15000)
 
+'Select checkbox'
 Windows.click(findWindowsObject('Object Repository/Left Penal - Validate/CheckBox(1)'))
 
+'Merge the required assets'
 Windows.click(findWindowsObject('Object Repository/Left Penal - Validate/MergeAssets'))
 
+'Select checkbox'
 Windows.click(findWindowsObject('Object Repository/Left Penal - Validate/CheckBox(1)'))
 
+'Validate the asset'
 Windows.click(findWindowsObject('Object Repository/Left Penal - Validate/FinalValidateAssetsButton'))
 
 Windows.click(findWindowsObject('Object Repository/Left Penal - Validate/OkButton'))
 
 Windows.click(findWindowsObject('Object Repository/Left Penal - Validate/Pane'))
 
-
-
+'Click upload button '
 Windows.click(findWindowsObject('Object Repository/Left Penal - Validate/UploadButton'))
 
 Windows.getText(findWindowsObject('Object Repository/Left Penal - Validate/AssetInValidateUpload'))
 
 Windows.click(findWindowsObject('Object Repository/Left Penal - Validate/AssetInValidateUpload'))
 
+'Verify asset is uploaded'
 def verfiyAssetUpload = Windows.getText(findWindowsObject('Object Repository/Left Penal - Validate/AssetInValidateUpload'))
 
+'Verify status of the upload '
 println(verfiyAssetUpload)
 
-
+'Verify the name of the uploading asset'
 println(Windows.getText(findWindowsObject('Object Repository/Left Penal - Validate/UploadStatus')))
 
+'Get the text of upload status'
 String initialStatus = Windows.getText(findWindowsObject('Object Repository/Left Penal - Validate/UploadStatus'))
 
-while (!initialStatus.equals('DONE')) {
-	Windows.delay(10)  // Wait for 5 seconds before checking again
-	initialStatus = Windows.getText(findWindowsObject('Object Repository/Left Penal - Validate/UploadStatus'))
+'Loop unless the "Done" status appears '
+while (!(initialStatus.equals('DONE'))) {
+    Windows.delay(10 // Wait for 5 seconds before checking again
+        )
+
+    initialStatus = Windows.getText(findWindowsObject('Object Repository/Left Penal - Validate/UploadStatus'))
 }
 
+'Confirm asset name and verify it'
 assert verfiyAssetUpload == 'Desktop 1'
-
-
-
-
-
-
-//Windows.click(findWindowsObject('Object Repository/Left Penal - Validate/PipelineButtonLeftPenal'))
-
-//def verifyAsset = Windows.getText(findWindowsObject('Object Repository/Left Penal - Validate/AssetInPipeline'))
-//
-//assert verifyAsset == 'Desktop'
 

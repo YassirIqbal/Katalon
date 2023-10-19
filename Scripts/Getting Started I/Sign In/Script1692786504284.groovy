@@ -17,29 +17,36 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+'Launch application - launch Asset Tracker'
 Windows.startApplicationWithTitle('C:\\Program Files\\Quixel Tracker staging3\\Quixel Tracker staging3.exe', 'Asset Tracker')
 
+'Added delay '
 Windows.delay(2)
 
+'Click for enter email'
 Windows.click(findWindowsObject('Object Repository/Getting Started/enterEmail'))
 
+'Set email in the required field (email is already pre set as Input value) '
 Windows.setText(findWindowsObject('Object Repository/Getting Started/enterEmail'), 'yassir@quixel.se')
 
+'Click for enter password'
 Windows.click(findWindowsObject('Object Repository/Getting Started/enterPass'))
 
+'Set password in the requried field (password input value is already set)'
 Windows.setText(findWindowsObject('Object Repository/Getting Started/enterPass'), 'kenwokurae0930')
 
+'Click log in button for log in'
 Windows.click(findWindowsObject('Object Repository/Getting Started/buttonLogin'))
 
+'added delay'
 Windows.delay(3)
 
 'For Trip stage confiramtion, it should have Trips in heading for successfull validation'
-def actualText = Windows.getText(findWindowsObject('Object Repository/Getting Started/textTripsHeading' ))
+def actualText = Windows.getText(findWindowsObject('Object Repository/Getting Started/textTripsHeading'))
 
 'An assert statement contains a boolean expression where this condition must hold true for the test execution to continue'
 assert actualText == 'TRIPS' : 'Step fails if text does not match'
 
+'Print line in console log : User signed in and navigated to correct page '
 println('User signed in and navigated to correct page')
-
-//Windows.closeApplication()
 

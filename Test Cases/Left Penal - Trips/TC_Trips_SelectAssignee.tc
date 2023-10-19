@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>Set Assignee in Trips</description>
    <name>TC_Trips_SelectAssignee</name>
    <tag></tag>
    <comment></comment>

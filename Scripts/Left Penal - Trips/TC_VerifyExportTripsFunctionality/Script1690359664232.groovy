@@ -18,26 +18,38 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
 //Windows.startApplicationWithTitle('C:\\Program Files\\Quixel Tracker staging3\\Quixel Tracker staging3.exe', 'Quixel Tracker staging3')
-
+'Added delay '
 Thread.sleep(5000)
 
+'Click export button \r\n'
 Windows.click(findWindowsObject('Object Repository/Left Penal - Trips/ExportTrips/ExportButton'))
 
+'Added delay'
 Thread.sleep(5000)
 
+'Click the desktop path on system'
 Windows.click(findWindowsObject('Object Repository/Left Penal - Trips/ExportTrips/DesktopPath'))
 
+'Added delay\r\n'
 Thread.sleep(5000)
 
+'Click the save button\r\n'
 Windows.click(findWindowsObject('Object Repository/Left Penal - Trips/ExportTrips/SaveButton'))
 
+'Added delay'
 Thread.sleep(5000)
 
-def downloadPath = "C://Users//Quixel//Desktop" // replace with your desired download path
+'Set path '
+def downloadPath = 'C://Users//Quixel//Desktop' // replace with your desired download path
 
 // verify that the file is downloaded successfully
-def file = new File(downloadPath + "\\Trips.csv")
+'Path where the file is downloaded '
+def file = new File(downloadPath + '\\Trips.csv')
+
+'Check if file exists on the given path earlier'
 assert file.exists()
 
 // verify the name of the downloaded file
-assert file.getName() == "Trips.csv"
+'Checking the name of the file to verify '
+assert file.getName() == 'Trips.csv'
+

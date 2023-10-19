@@ -28,10 +28,10 @@ import org.openqa.selenium.Keys as Keys
 //def verifySignIn = Windows.getText(findWindowsObject('Object Repository/Sign In/Text(1)'))
 //
 //assert verifySignIn == 'TRIPS'
-
+'Added delay '
 Thread.sleep(10000)
 
-
+'Go to legal Review in AT '
 Windows.click(findWindowsObject('Object Repository/Left Penal - Legal Review/LegalReview'))
 
 //Windows.click(findWindowsObject('Object Repository/Left Penal - Trips/SearchIcon'))
@@ -41,55 +41,68 @@ Windows.click(findWindowsObject('Object Repository/Left Penal - Legal Review/Leg
 //Windows.setText(findWindowsObject('Object Repository/Left Penal - Trips/SearchField'), 'Desktop')
 //
 //Windows.sendKeys(findWindowsObject('Object Repository/Left Penal - Trips/SearchField'), Keys.chord(Keys.ENTER))
-
+'Added delay '
 Thread.sleep(5000)
 
+'Click an asset to open '
 Windows.click(findWindowsObject('Object Repository/Left Penal - Legal Review/DataItem'))
 
+'Click the dropdown to expand it'
 Windows.click(findWindowsObject('Object Repository/Left Penal - Legal Review/LegalReviewDropdowm'))
 
+'Select passed status from the legal review dropdown'
 Windows.click(findWindowsObject('Object Repository/Left Penal - Legal Review/PassedReviewSelection'))
 
+'Switch to confirmation window (pop up)'
 Windows.switchToWindowTitle('Confirm')
 
+'Click "Yes" option from pop up'
 Windows.click(findWindowsObject('Object Repository/Left Penal - Legal Review/YesButton'))
 
+'Switched back to main application window'
 Windows.switchToWindowTitle('Quixel Tracker')
-
 
 //Assertion to check right value is selected 
+'Get the legal reivew dropdown text (status)'
 def verifyStatus = Windows.getText(findWindowsObject('Object Repository/Left Penal - Legal Review/LegalReviewDropdownPassed'))
 
-assert verifyStatus == 'Passed', "Selected value doesn't match the expected value"
+'Verifiy if "passed" is selected '
+assert verifyStatus == 'Passed' : 'Selected value doesn\'t match the expected value'
 
-
-
-
+'Click the legal review dropdown to open it '
 Windows.click(findWindowsObject('Object Repository/Left Penal - Legal Review/LegalReviewDropdownPassed'))
 
+'Click status "passed with comment" from the dropdown'
 Windows.click(findWindowsObject('Object Repository/Left Penal - Legal Review/PassedwithComment'))
 
+'Switch to confirmation window (pop-up)'
 Windows.switchToWindowTitle('Confirm')
 
+'Click "Yes" option from pop up\r\n'
 Windows.click(findWindowsObject('Object Repository/Left Penal - Legal Review/YesButton1'))
 
+'Switched back to main applicaiton window'
 Windows.switchToWindowTitle('Quixel Tracker')
-
 
 //Assertion to check right value is selected
+'Get the legal reivew dropdown text (status)'
 def verifyStatus1 = Windows.getText(findWindowsObject('Object Repository/Left Penal - Legal Review/DropdownPassedWithComment'))
 
-assert verifyStatus1 == 'Passed with Comment', "Selected value doesn't match the expected value"
+'Verifiy if "passed with comment" is selected '
+assert verifyStatus1 == 'Passed with Comment' : 'Selected value doesn\'t match the expected value'
 
-
+'Click status "passed with comment" from the dropdown'
 Windows.click(findWindowsObject('Object Repository/Left Penal - Legal Review/DropdownPassedWithComment'))
 
+'Click Not needed (status)'
 Windows.click(findWindowsObject('Object Repository/Left Penal - Legal Review/NotNeeded'))
 
+'Switch to confirmation window (pop up)'
 Windows.switchToWindowTitle('Confirm')
 
+'Click "Yes" option from pop up'
 Windows.click(findWindowsObject('Object Repository/Left Penal - Legal Review/YesButton2'))
 
+'Switched back to main application window'
 Windows.switchToWindowTitle('Quixel Tracker')
-
 

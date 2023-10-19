@@ -18,7 +18,7 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
 //Windows.startApplicationWithTitle('C:\\Program Files\\Quixel Tracker staging3\\Quixel Tracker staging3.exe', 'Quixel Tracker staging3')
-
+'Added delay'
 Thread.sleep(10000)
 
 //
@@ -29,15 +29,18 @@ Thread.sleep(10000)
 //Windows.setText(findWindowsObject('Object Repository/Left Penal - Trips/SearchField'), 'Desktop')
 //
 //Windows.sendKeys(findWindowsObject('Object Repository/Left Penal - Trips/SearchField'), Keys.chord(Keys.ENTER))
-
-
+'Click the Assignee field '
 Windows.click(findWindowsObject('Object Repository/Left Penal - Trips/Asset Assignee/AssigneeField'))
 
+'Click the search Assignee field'
 Windows.click(findWindowsObject('Object Repository/Left Penal - Trips/Asset Assignee/SearchAssignee1'))
 
+'Set text for "Search Assignee field"'
 Windows.setText(findWindowsObject('Object Repository/Left Penal - Trips/Asset Assignee/SearchAssignee1'), 'Muhammad')
 
+'Select the assignee from the results'
 Windows.click(findWindowsObject('Object Repository/Left Penal - Trips/Asset Assignee/SelectAssignee'))
 
+'Get the text of assinged user'
 Windows.getText(findWindowsObject('Object Repository/Left Penal - Trips/Asset Assignee/AssigneeField'))
 

@@ -17,26 +17,35 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+'Launch application - launch Asset Tracker'
 Windows.startApplicationWithTitle('C:\\Program Files\\Quixel Tracker staging3\\Quixel Tracker staging3.exe', 'Asset Tracker')
 
+'added delay'
 Windows.delay(10)
 
 //Windows.click(findWindowsObject('Object Repository/Getting Started/Edit'))
-
+'Set email text'
 Windows.setText(findWindowsObject('Object Repository/Getting Started/enterEmail'), 'yassir@quixel.se')
 
 //Windows.click(findWindowsObject('Object Repository/Getting Started/Edit(1)'))
-
+'Set password'
 Windows.setText(findWindowsObject('Object Repository/Getting Started/enterPass'), 'kenwokurae0930')
 
+'Click login button'
 Windows.click(findWindowsObject('Object Repository/Getting Started/buttonLogin'))
 
+'Added delay'
 Windows.delay(3)
 
+'Click button account'
 Windows.click(findWindowsObject('Object Repository/Getting Started/ButtonAccount'))
 
+'Click sign out button'
 Windows.click(findWindowsObject('Object Repository/Getting Started/ButtonSignOut'))
 
+'Added delay'
 Windows.delay(3)
 
+'Close application'
 Windows.closeApplication()
+
